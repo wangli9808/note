@@ -382,8 +382,7 @@ job.setNumReduceTasks(3);
 ##### job执行流程
 
 1. run job：客户端提交一个mr的jar包给JobClient。提交方式：hadoop jar …
-
-2. 1. 做job环境信息的收集，比如各个组件类，输入输出的kv类型等，检测是否合法
+   1. 做job环境信息的收集，比如各个组件类，输入输出的kv类型等，检测是否合法
    2. 检测输入输出的路径是否合法
 
 3. JobClient通过RPC和ResourceManager进行通信，返回一个存放jar包的地址（HDFS）和jobId。jobID是全局唯一的，用于标识该job
